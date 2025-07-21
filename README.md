@@ -31,7 +31,7 @@
 
 <p align="center">
   <!-- 在这里替换成你的GIF链接或者直接上传图片 -->
-  <img src="动画.gif" alt="AI助手演示" width="80%">
+  <img src="sky-take-out/动画.gif" alt="AI助手演示" width="80%">
 </p>
 
 ### 实现亮点
