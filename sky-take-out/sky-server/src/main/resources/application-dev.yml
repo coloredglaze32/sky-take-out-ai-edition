@@ -1,0 +1,23 @@
+sky:
+  datasource:
+    driver-class-name: 
+    host: 
+    port: 
+    database: 
+    username: 
+    password: 
+  alioss:
+    endpoint: 
+    access-key-id: 
+    access-key-secret: 
+    bucket-name: 
+
+  redis:
+    host: localhost
+    port: 6379
+    password: 123456
+    database: 10
+
+  wechat:
+    appid: 
+    secret: 

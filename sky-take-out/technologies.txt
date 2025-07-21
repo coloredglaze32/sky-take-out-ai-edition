@@ -1,0 +1,11 @@
+项目核心技术栈
+
+后端框架: Spring Boot 3, Spring MVC, Spring Security (JWT), MyBatis
+AI能力集成: LangChain4j, LangChain4j-DashScope (通义千问), Function Calling
+数据库相关: MySQL 8, Druid, Redis
+API & 文档: RESTful API, Knife4j
+异步与响应式: Project Reactor (Flux), Spring Task
+构建与部署: Maven, Docker
+
+开发工具: IntelliJ IDEA, Git, Postman
+其他: WebSocket, Jackson, Lombok 

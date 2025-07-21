@@ -1,0 +1,87 @@
+server:
+  port: 8080
+
+spring:
+  profiles:
+    active: dev
+  main:
+    allow-circular-references: true
+  datasource:
+    driver-class-name: com.mysql.cj.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/sky_take_out?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+    username: root
+    password: 123456
+
+  # redis:
+  #   host: localhost
+  #   port: 6379
+  #   password: 123456
+  #   database: 10
+  data:
+    mongodb:
+      uri: mongodb://localhost:27017/sky_take_out
+
+mybatis:
+  #mapper配置文件
+  mapper-locations: classpath:mapper/*.xml
+  type-aliases-package: com.sky.entity
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+
+logging:
+  level:
+    com:
+      sky:
+        mapper: debug
+        service: info
+        controller: info
+
+sky:
+  jwt:
+    # 设置jwt签名加密时使用的秘钥
+    admin-secret-key: itcast
+    # 设置jwt过期时间
+    admin-ttl: 7200000
+    # 设置前端传递过来的令牌名称
+    admin-token-name: token
+    user-secret-key: itheima
+    user-ttl: 7200000
+    user-token-name: authentication
+  alioss:
+    bucket-name: ${sky.alioss.bucket-name}
+    access-key-id: ${sky.alioss.access-key-id}
+    access-key-secret: ${sky.alioss.access-key-secret}
+    endpoint: ${sky.alioss.endpoint}
+  wechat:
+    appid: ${sky.wechat.appid}
+    secret: ${sky.wechat.secret}
+langchain4j:
+  community:
+    dashscope:
+      chat-model:
+        api-key: yourapikey
+        model-name: qwen-plus
+      streaming-chat-model:
+        api-key: yourapikey
+        model-name: qwen-plus
+      embedding-model:
+        api-key: yourapikey
+        model-name: text-embedding-v3
+springdoc:
+  api-docs:
+    enabled: true
+    path: /v3/api-docs
+  swagger-ui:
+    enabled: true
+    path: /swagger-ui.html
+    try-it-out-enabled: true
+  default-consumes-media-type: application/json
+  default-produces-media-type: application/json
+  packages-to-scan: com.sky.controller
+knife4j:
+  enable: true
+  production: false
+  basic:
+    enable: false
+
